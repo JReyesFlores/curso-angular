@@ -1,4 +1,5 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core'; 
+//import * as $ from 'jquery'; // Importando JQuery en angular 
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements DoCheck, OnInit {
   ngOnInit(): void {
     //throw new Error("Method not implemented.");
     //console.log(localStorage.getItem('emailContacto'));
-    
+      
   }
   
   ngDoCheck(): void {
