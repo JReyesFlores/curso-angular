@@ -26,24 +26,24 @@ export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
     //Hook OnDestroy => Se ejecuta con ng elimine el componente
     ngOnDestroy(): void {
         //throw new Error("Method not implemented.");
-        console.log('se elimina el component');
+        //console.log('se elimina el component');
     }
 
     //Hook DoCheck => Cada modificación, o ejecución de un evento
     ngDoCheck(): void {
         //throw new Error("Method not implemented.");
-        console.log('docheck ejecutado!!');
+        //console.log('docheck ejecutado!!');
     }
 
     //Hook oninit => Se inicia el componente solo una vez, a demás se procesa después del onchange
     ngOnInit(): void {
         //throw new Error("Method not implemented.");
-        console.log('oninit ejecutado!!');
+        //console.log('oninit ejecutado!!');
     }
 
     //Hook onchanges => permite identificar los cambios del componente así como su atributos
     ngOnChanges(changes: SimpleChanges): void {
-        console.log('onchange ejecutado!!');
+        //console.log('onchange ejecutado!!');
     }
 
     EmitirEvento(){

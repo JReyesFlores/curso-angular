@@ -7,6 +7,20 @@
 </head>
 <body>
   <h1>{{title}}</h1>
-  <tienda></tienda>
+  <a [routerLink]="['/home']">Inicio </a>
+  <a [routerLink]="['/animales']">Animales </a>
+  <a [routerLink]="['/cuidadores']">Cuidadores </a>
+  <a [routerLink]="['/tienda']">Tienda </a>
+  <a [routerLink]="['/contacto']">Contacto </a>
+
+  <span *ngIf="emailContacto">
+    <strong>Email de contacto: </strong>{{emailContacto}}
+    <button (click)="borrarEmail()">Eliminar mail de contacto</button>
+  </span>
+  <hr>
+  <!--<tienda></tienda>-->
+
+  <!--Se utiliza para cargar el componente en base a la ruta-->
+  <router-outlet></router-outlet>
 </body>
 </html>

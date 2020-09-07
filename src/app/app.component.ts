@@ -1,15 +1,29 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements DoCheck {
+export class AppComponent implements DoCheck, OnInit {
+  public title:string = 'curso-angular';
+  public emailContacto:string;
   
-    ngDoCheck(): void {
-      //throw new Error("Method not implemented.");
-      console.log('docheck ejecutado!! - appComponent');
+  ngOnInit(): void {
+    //throw new Error("Method not implemented.");
+    //console.log(localStorage.getItem('emailContacto'));
+    
   }
-  title = 'curso-angular';
+  
+  ngDoCheck(): void {
+    //throw new Error("Method not implemented.");
+    //console.log('docheck ejecutado!! - appComponent');
+    this.emailContacto = localStorage.getItem('emailContacto');
+  }
+
+  borrarEmail(): void {
+    localStorage.removeItem('emailContacto');
+    localStorage.clear(); //elimina todos los elementos del localstorage
+    this.emailContacto=null;
+  }
 }
